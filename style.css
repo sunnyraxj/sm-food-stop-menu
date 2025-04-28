@@ -1,0 +1,146 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #ffe0e0, #ffffff);
+    color: #333;
+    padding: 10px;
+    overflow-x: hidden;
+    position: relative;
+  }
+  
+  header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  header h1 {
+    font-size: 30px;
+    color: #FF6B35;
+  }
+  
+  header p {
+    font-size: 14px;
+    color: #555;
+    margin-top: 5px;
+  }
+  
+  .categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .categories button {
+    background-color: #FF6B35;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s;
+  }
+  
+  .categories button:hover {
+    background-color: #e55a27;
+  }
+  
+  #menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .menu-category {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 35px;
+    animation: fadeIn 0.5s ease;
+  }
+  
+  .card {
+    background: #FFF;
+    
+    padding: 10px;
+    border-radius: 15px;
+    width: 150px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: 0.3s;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+  
+  .card img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  
+  .card h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  .card p {
+    font-size: 14px;
+    color: #FF6B35;
+  }
+  
+  /* Heart Animation */
+  .hearts {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  .hearts::before {
+    content: '❤️';
+    font-size: 20px;
+    animation: hearts 10s linear infinite;
+    display: inline-block;
+    white-space: nowrap;
+  }
+  
+  @keyframes hearts {
+    0% {transform: translateY(-100%) rotate(0);}
+    100% {transform: translateY(100vh) rotate(360deg);}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  
+  /* Responsive */
+  @media (max-width: 600px) {
+    .card {
+      width: 130px;
+    }
+  }
+.footer{
+    font-size: 0.8rem;
+    align-items: center;
+    margin-top: 40px;
+    text-align: center;
+}
+  

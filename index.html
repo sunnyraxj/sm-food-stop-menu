@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SM Food Stop Menu</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="https://i.pinimg.com/736x/11/59/fc/1159fc9308af3a2acd3697bbc4ade393.jpg" type="image/x-icon">
+</head>
+<body>
+
+  <!-- Floating Hearts -->
+  <div class="hearts"></div>
+
+  <!-- Background Music -->
+  <audio autoplay loop id="bg-music">
+    <source src="music.mp3" type="audio/mpeg">
+    Your browser does not support audio.
+  </audio>
+
+  <header>
+    <h1>SM Food Stop 🍽️</h1>
+    <p>GHY, Panjabari bus stop, near sbi bank <br><br>Contact: +91-6003238703 | +91-6900388876</p>
+  </header>
+
+  <nav class="categories">
+    <button onclick="showCategory('all')">All</button>
+    <button onclick="showCategory('starter-nonveg')">Starter (Non-Veg)</button>
+    <button onclick="showCategory('starter-veg')">Starter (Veg)</button>
+    <button onclick="showCategory('noodles')">Noodles</button>
+    <button onclick="showCategory('fried-rice')">Fried Rice</button>
+    <button onclick="showCategory('rolls')">Rolls</button>
+    <button onclick="showCategory('momo')">Momo</button>
+  </nav>
+
+  <section id="menu">
+
+    <!-- All Menu Items (All category shows all items) -->
+    <div class="menu-category" id="all">
+      <!-- Starter Non-Veg -->
+      <div class="card">
+        <img src="chilly chiken.png.jpeg" alt="Chilly Chicken">
+        <h3>Chilly Chicken</h3><p>₹119</p>
+      </div>
+      <div class="card">
+        <img src="chiken dry fry.jpeg" alt="Chicken Dry Fry">
+        <h3>Chicken Dry Fry</h3><p>₹99</p>
+      </div>
+      <div class="card">
+        <img src="https://i.pinimg.com/736x/b2/c7/e7/b2c7e74848ca8f57a2f5bad085e11152.jpg" alt="Drums of Heaven">
+        <h3>Chicken Drums of Heaven</h3><p>₹129</p>
+      </div>
+
+      <!-- Starter Veg -->
+      <div class="card">
+        <img src="https://i.pinimg.com/736x/c6/2d/67/c62d673f4dd497df277ec741084d401f.jpg" alt="Chilly Paneer Dry">
+        <h3>Chilly Paneer Dry</h3><p>₹129</p>
+      </div>
+
+      <!-- Noodles -->
+      <div class="card">
+        <img src="https://i.pinimg.com/736x/35/9d/28/359d28299cfbf2e050ddf80c0d05b008.jpg" alt="Veg Hakka Noodles">
+        <h3>Veg Hakka Noodles</h3><p>₹59</p>
+      </div>
+      <div class="card">
+        <img src="https://i.pinimg.com/736x/a7/56/60/a75660f75a65081553cb474ff9783f9a.jpg" alt="Paneer Hakka Noodles">
+        <h3>Paneer Hakka Noodles</h3><p>₹79</p>
+      </div>
+      <div class="card">
+        <img src="https://i.pinimg.com/736x/34/f3/92/34f39299cbc1f53ba36c3399ff2ee0ad.jpg" alt="Egg Hakka Noodles">
+        <h3>Egg Hakka Noodles</h3><p>₹69</p>
+      </div>
+      <div class="card">
+        <img src="https://i.pinimg.com/736x/4f/cc/39/4fcc390de31475fba26f09ef5a6c1f5c.jpg" alt="Chicken Hakka Noodles">
+        <h3>Chicken Hakka Noodles</h3><p>₹89</p>
+      </div>
+      <div class="card">
+        <img src="https://i.pinimg.com/736x/fa/88/52/fa88522855214abcc44864616d478afa.jpg" alt="SM Special Noodles">
+        <h3>SM Special Noodles</h3><p>₹110</p>
+      </div>
+
+      <!-- Fried Rice -->
+      <div class="card">
+        <img src="https://i.pinimg.com/736x/2b/63/eb/2b63eb4b22e1f9ddbd069ec6805420ec.jpg" alt="Veg Fried Rice">
+        <h3>Veg Fried Rice</h3><p>₹59</p>
+      </div>
+      <div class="card">
+        <img src="https://i.pinimg.com/736x/d6/fa/df/d6fadff0257cac49882642310f0ffda4.jpg" alt="Egg Fried Rice">
+        <h3>Egg Fried Rice</h3><p>₹69</p>
+      </div>
+      <div class="card">
+        <img src="https://i.pinimg.com/736x/39/65/37/39653709cca72ca619b46f734a39b74c.jpg" alt="Paneer Fried Rice">
+        <h3>Paneer Fried Rice</h3><p>₹79</p>
+      </div>
+      <div class="card">
+        <img src="https://i.pinimg.com/736x/57/0d/ba/570dba4d2bc3c63c5d4dfb7bb29f86d4.jpg" alt="Chicken Fried Rice">
+        <h3>Chicken Fried Rice</h3><p>₹89</p>
+      </div>
+      <div class="card">
+        <img src="https://i.pinimg.com/736x/1f/7e/a8/1f7ea8e1428dc52cc7825130dd548292.jpg" alt="SM Special Fried Rice">
+        <h3>SM Special Fried Rice</h3><p>₹110</p>
+      </div>
+
+      <!-- Rolls -->
+      <div class="card">
+        <img src="https://i.pinimg.com/736x/74/18/1e/74181e0c9068e8841ced7f1f9a22c9c1.jpg" alt="Veg Roll">
+        <h3>Veg Roll</h3><p>₹49</p>
+      </div>
+      <div class="card">
+        <img src="https://i.pinimg.com/736x/fc/e3/46/fce346a71601e78c18d2f7e4b3a2eb4e.jpg" alt="Egg Roll">
+        <h3>Egg Roll</h3><p>₹59</p>
+      </div>
+      <div class="card">
+        <img src="https://i.pinimg.com/736x/71/24/10/7124108e6ad0b99d6f72e92e2f00de14.jpg" alt="Chicken Roll">
+        <h3>Chicken Roll</h3><p>₹79</p>
+      </div>
+      <div class="card">
+        <img src="https://i.pinimg.com/736x/50/3f/13/503f13f2ef189e852844508200a328df.jpg" alt="SM Special Roll">
+        <h3>SM Special Roll</h3><p>₹100</p>
+      </div>
+      <div class="card">
+        <img src="https://i.pinimg.com/736x/00/e4/f0/00e4f0a424a905fd9a6d569f602e4992.jpg" alt="Add Cheese">
+        <h3>Add Cheese</h3><p>+ ₹30</p>
+      </div>
+
+      <!-- Momo -->
+      <div class="card">
+        <img src="https://i.pinimg.com/736x/ea/21/d7/ea21d74ddc2f295e42ad122d5f9de51b.jpg" alt="Chicken Steam Momo">
+        <h3>Chicken Steam Momo</h3><p>₹49</p>
+      </div>
+    </div>
+
+    <!-- Other Categories (just show respective items) -->
+    <div class="menu-category" id="starter-nonveg">
+        <div class="card">
+            <img src="chilly chiken.png.jpeg" alt="Chilly Chicken">
+            <h3>Chilly Chicken</h3><p>₹119</p>
+          </div>
+          <div class="card">
+            <img src="chiken dry fry.jpeg" alt="Chicken Dry Fry">
+            <h3>Chicken Dry Fry</h3><p>₹99</p>
+          </div>
+          <div class="card">
+            <img src="https://i.pinimg.com/736x/b2/c7/e7/b2c7e74848ca8f57a2f5bad085e11152.jpg" alt="Drums of Heaven">
+            <h3>Chicken Drums of Heaven</h3><p>₹129</p>
+          </div>
+      <!-- Add more non-veg starter items -->
+    </div>
+
+    <div class="menu-category" id="starter-veg">
+      <div class="card">
+        <img src="https://i.pinimg.com/736x/c6/2d/67/c62d673f4dd497df277ec741084d401f.jpg" alt="Chilly Paneer Dry">
+        <h3>Chilly Paneer Dry</h3><p>₹129</p>
+      </div>
+      <!-- Add more veg starter items -->
+    </div>
+
+    <div class="menu-category" id="noodles">
+        <div class="card">
+            <img src="https://i.pinimg.com/736x/35/9d/28/359d28299cfbf2e050ddf80c0d05b008.jpg" alt="Veg Hakka Noodles">
+            <h3>Veg Hakka Noodles</h3><p>₹59</p>
+          </div>
+          <div class="card">
+            <img src="https://i.pinimg.com/736x/a7/56/60/a75660f75a65081553cb474ff9783f9a.jpg" alt="Paneer Hakka Noodles">
+            <h3>Paneer Hakka Noodles</h3><p>₹79</p>
+          </div>
+          <div class="card">
+            <img src="https://i.pinimg.com/736x/34/f3/92/34f39299cbc1f53ba36c3399ff2ee0ad.jpg" alt="Egg Hakka Noodles">
+            <h3>Egg Hakka Noodles</h3><p>₹69</p>
+          </div>
+          <div class="card">
+            <img src="https://i.pinimg.com/736x/4f/cc/39/4fcc390de31475fba26f09ef5a6c1f5c.jpg" alt="Chicken Hakka Noodles">
+            <h3>Chicken Hakka Noodles</h3><p>₹89</p>
+          </div>
+          <div class="card">
+            <img src="https://i.pinimg.com/736x/fa/88/52/fa88522855214abcc44864616d478afa.jpg" alt="SM Special Noodles">
+            <h3>SM Special Noodles</h3><p>₹110</p>
+          </div>
+      <!-- Add more noodle items -->
+    </div>
+
+    <div class="menu-category" id="fried-rice">
+        <div class="card">
+            <img src="https://i.pinimg.com/736x/2b/63/eb/2b63eb4b22e1f9ddbd069ec6805420ec.jpg" alt="Veg Fried Rice">
+            <h3>Veg Fried Rice</h3><p>₹59</p>
+          </div>
+          <div class="card">
+            <img src="https://i.pinimg.com/736x/d6/fa/df/d6fadff0257cac49882642310f0ffda4.jpg" alt="Egg Fried Rice">
+            <h3>Egg Fried Rice</h3><p>₹69</p>
+          </div>
+          <div class="card">
+            <img src="https://i.pinimg.com/736x/39/65/37/39653709cca72ca619b46f734a39b74c.jpg" alt="Paneer Fried Rice">
+            <h3>Paneer Fried Rice</h3><p>₹79</p>
+          </div>
+          <div class="card">
+            <img src="https://i.pinimg.com/736x/57/0d/ba/570dba4d2bc3c63c5d4dfb7bb29f86d4.jpg" alt="Chicken Fried Rice">
+            <h3>Chicken Fried Rice</h3><p>₹89</p>
+          </div>
+          <div class="card">
+            <img src="https://i.pinimg.com/736x/1f/7e/a8/1f7ea8e1428dc52cc7825130dd548292.jpg" alt="SM Special Fried Rice">
+            <h3>SM Special Fried Rice</h3><p>₹110</p>
+          </div>
+      <!-- Add more fried rice items -->
+    </div>
+
+    <div class="menu-category" id="rolls">
+        <div class="card">
+            <img src="https://i.pinimg.com/736x/74/18/1e/74181e0c9068e8841ced7f1f9a22c9c1.jpg" alt="Veg Roll">
+            <h3>Veg Roll</h3><p>₹49</p>
+          </div>
+          <div class="card">
+            <img src="https://i.pinimg.com/736x/fc/e3/46/fce346a71601e78c18d2f7e4b3a2eb4e.jpg" alt="Egg Roll">
+            <h3>Egg Roll</h3><p>₹59</p>
+          </div>
+          <div class="card">
+            <img src="https://i.pinimg.com/736x/71/24/10/7124108e6ad0b99d6f72e92e2f00de14.jpg" alt="Chicken Roll">
+            <h3>Chicken Roll</h3><p>₹79</p>
+          </div>
+          <div class="card">
+            <img src="https://i.pinimg.com/736x/50/3f/13/503f13f2ef189e852844508200a328df.jpg" alt="SM Special Roll">
+            <h3>SM Special Roll</h3><p>₹100</p>
+          </div>
+          <div class="card">
+            <img src="https://i.pinimg.com/736x/00/e4/f0/00e4f0a424a905fd9a6d569f602e4992.jpg" alt="Add Cheese">
+            <h3>Add Cheese</h3><p>+ ₹30</p>
+          </div>
+      <!-- Add more roll items -->
+    </div>
+
+    <div class="menu-category" id="momo">
+      <div class="card">
+        <img src="https://i.pinimg.com/736x/ea/21/d7/ea21d74ddc2f295e42ad122d5f9de51b.jpg" alt="Chicken Steam Momo">
+        <h3>Chicken Steam Momo</h3><p>₹49</p>
+      </div>
+      <!-- Add more momo items -->
+    </div>
+
+  </section>
+
+<footer class="footer">
+    The photos of the menu items are for display purposes only. The final items may differ in appearance.
+</footer>
+  <script src="script.js"></script>
+</body>
+</html>
